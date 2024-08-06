@@ -1,0 +1,24 @@
+[package]
+name = "solana_data_aggregator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+solana-client = "2.0.3"
+solana-sdk = "2.0.3"
+solana-transaction-status = "2.0.3"
+solana-account-decoder = "2.0.4"
+solana-pubsub-client = "2.0.4"
+solana-rpc-client-api = "2.0.4"
+tokio = { version = "1", features = ["full"] }
+axum = "0.7.5"
+actix-web = "4.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = "0.4"
+log = "0.4"
+toml = "0.8.19"
+anyhow = "1.0.86"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+thiserror = "1.0.63"

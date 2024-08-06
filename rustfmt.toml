@@ -1,0 +1,47 @@
+# rustfmt.toml
+# This configuration file is set up for use in production environments.
+
+# Maximum width of each line
+max_width = 100
+
+# Use spaces for indentation
+hard_tabs = false
+
+# Number of spaces used per indentation level
+tab_spaces = 4
+
+# Order imports alphabetically
+reorder_imports = true
+
+# Optimize the use of vertical space in import declarations
+imports_granularity = "Crate"
+
+# Sort module declarations alphabetically
+reorder_modules = true
+
+# Use single line comments and put a space after `//`
+normalize_comments = true
+
+# Enforce documentation style
+normalize_doc_attributes = true
+
+# Enforce blank line after attributes
+blank_lines_upper_bound = 1
+
+# Control flow constructs brace style
+brace_style = "SameLineWhere"
+
+# Function parameters formatting
+fn_params_layout = "Compressed"
+
+# Control the spacing around different tokens
+spaces_around_ranges = true
+
+# Struct field alignment strategy
+struct_field_align_threshold = 20
+
+# Alignment of match arms
+match_arm_blocks = true
+
+# Controls the formatting of arrays
+array_width = 60

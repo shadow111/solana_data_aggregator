@@ -1,0 +1,7 @@
+solana_rpc_url = "https://api.mainnet-beta.solana.com"
+solana_ws_url = "wss://api.devnet.solana.com/"
+api_bind_address = "127.0.0.1"
+port="8080"
+database_url = "postgres://user:password@localhost/solana_db"  # Optional
+transaction_signature = "2HPoKDsUT8ykjcDDS48q5xzs8zfNasK6jU671Yt7RrDJSQMgsoJJbjEMJPyJy5Jmqqfa5SFbixpzFe6o7GqxfQ8S"
+account_pubkey = "AraZvms1SZihAXBRAVVxqQduREdHu2VBbJ3cECLB6nYE"

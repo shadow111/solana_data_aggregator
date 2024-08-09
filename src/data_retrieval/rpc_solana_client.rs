@@ -4,7 +4,7 @@ use solana_sdk::{
     account::Account, commitment_config::CommitmentConfig, pubkey::Pubkey, signature::Signature,
 };
 use solana_transaction_status::{
-    self, EncodedConfirmedTransactionWithStatusMeta, UiTransactionEncoding,
+    self, EncodedConfirmedBlock, EncodedConfirmedTransactionWithStatusMeta, UiTransactionEncoding,
 };
 use std::{error::Error, str::FromStr, sync::Arc};
 
@@ -63,5 +63,17 @@ impl RpcSolanaClient {
             Some(account) => Ok(account),
             None => Err("Account not found.".into()),
         }
+    }
+
+    pub async fn get_transaction_by_slot(
+        &self, slot: u64,
+    ) -> Result<EncodedConfirmedBlock, Box<dyn Error>> {
+        self.rpc_client
+            .get_block_with_encoding(slot, UiTransactionEncoding::JsonParsed)
+            .await
+            .map_err(|e| {
+                eprintln!("Failed to fetch block: {:?}", e);
+                "Failed to decode Block.".into()
+            })
     }
 }

@@ -173,7 +173,7 @@ mod tests {
     use solana_sdk::pubkey::Pubkey;
     use solana_transaction_status::{
         EncodedConfirmedTransactionWithStatusMeta, EncodedTransaction,
-        EncodedTransactionWithStatusMeta, UiMessage, UiParsedInstruction::PartiallyDecoded,
+        EncodedTransactionWithStatusMeta, UiMessage,
         UiParsedMessage, UiTransaction,
     };
 

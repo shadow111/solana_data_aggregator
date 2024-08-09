@@ -24,7 +24,7 @@ The Solana Data Aggregator is a Rust-based application designed to retrieve, pro
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/solana-data-aggregator.git
+git clone https://github.com/shadow111/solana-data-aggregator.git
 cd solana-data-aggregator
 ```
 
@@ -60,16 +60,16 @@ port = "8080"
 
 Once the application is running, the RESTful API can be accessed via the configured bind address. The following endpoints are available:
 
-- **GET /transactions:** Retrieve recent transactions.
+- **GET /api/transaction/signature/:signature:** Retrieve transaction by signature.
 - **GET /accounts/:pubkey:** Get details for a specific account.
-- **GET /block/:slot:** Retrieve block data for a given slot.
+- **GET /api/transaction/slot/:slot:** Retrieve block data for a given slot.
 
 ### Example Requests
 
 ```bash
 curl http://127.0.0.1:8000/api/transaction/signature/:signature
 curl http://127.0.0.1:8000/api/account/:pubkey
-curl http://127.0.0.1:8000//api/transaction/slot/:slot
+curl http://127.0.0.1:8000/api/transaction/slot/:slot
 ```
 
 ## Testing
